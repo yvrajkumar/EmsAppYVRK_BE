@@ -15,7 +15,8 @@ use Rack::Cors do
     # end
   
     allow do
-      origins 'http://localhost:3000'
+      # origins 'http://localhost:3000'
+       origins 'emp-app-yvrk.netlify.app'
       resource '*', :headers => :any, :methods => [:get, :post, :delete, :options]
     end
   end
