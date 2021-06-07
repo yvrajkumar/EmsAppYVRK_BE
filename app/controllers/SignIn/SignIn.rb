@@ -8,6 +8,7 @@ module SignIn
         def call (env)
             response = request.body.read
             signinDetails = JSON.parse(response)
+            puts signinDetails
             email = signinDetails['signinDetails']['email']
             password = signinDetails['signinDetails']['password']
             
