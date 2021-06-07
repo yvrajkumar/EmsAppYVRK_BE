@@ -1,6 +1,7 @@
 require 'pg'
 require 'hanami/controller'
 require 'json'
+require './SignIn.rb'
 
 module SignIn
     class SignIn
