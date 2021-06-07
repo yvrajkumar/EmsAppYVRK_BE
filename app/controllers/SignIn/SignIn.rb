@@ -9,9 +9,7 @@ module SignIn
             request.body.rewind
             response = request.body.read
             puts response
-            puts "HI"
             signinDetails = JSON.parse(response)
-            puts "HI"
             email = signinDetails['signinDetails']['email']
             password = signinDetails['signinDetails']['password']
             
