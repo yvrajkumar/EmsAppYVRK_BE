@@ -6,7 +6,7 @@ module SignIn
     class SignIn
         include ::Hanami::Action
         def call (env)
-            response = "#{ env[] }"
+            response = request.body.read
             puts response
             puts "HI"
             signinDetails = JSON.parse(response)
