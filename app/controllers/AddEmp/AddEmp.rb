@@ -6,6 +6,7 @@ module AddEmp
     class AddEmp
         include ::Hanami::Action
         def call (env)
+            puts "add emp"
             response = request.body.read
             signupDetails = JSON.parse(response)
             name = signupDetails['signupDetails']['name']
