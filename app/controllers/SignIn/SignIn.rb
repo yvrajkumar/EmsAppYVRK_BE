@@ -12,6 +12,8 @@ module SignIn
             signinDetails = JSON.parse(response)
             email = signinDetails['signinDetails']['email']
             password = signinDetails['signinDetails']['password']
+            puts email
+            puts password
             
             begin
                 con = PG.connect :host => 'ec2-3-234-22-132.compute-1.amazonaws.com', :dbname => 'd1re1k2rplt7t2', :user => 'sewuvljklsqoqu', :password => '18f0134f286951799b72989aaf762d0ef926afad65d2c9e6f7c959aa991b1246'
