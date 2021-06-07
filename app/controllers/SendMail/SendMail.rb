@@ -7,7 +7,7 @@ include SendGrid
 module SendMail
     class SendMail
         include ::Hanami::Action
-        def call (env)
+        def call (env) 
             response = request.body.read
             emailDetails = JSON.parse(response)
             puts emailDetails
