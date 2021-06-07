@@ -19,7 +19,7 @@ module SendMail
                 existingUser = con.exec "select exists (select * from emp where email='#{email}')"
                 puts existingUser[0]["exists"]
 
-                if existingUser[0]["exists"]==='t'
+                if existingUser[0]["exists"]=='t'
                     from = SendGrid::Email.new(email: 'emsappyvrk@gmail.com')
                     to = SendGrid::Email.new(email: email)
                     subject = 'Password Reset Code'
