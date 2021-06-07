@@ -8,7 +8,6 @@ module SignIn
         def call (env)
             request.body.rewind
             response = request.body.read
-            request.body.rewind
             puts response
             puts "HI"
             signinDetails = JSON.parse(response)
