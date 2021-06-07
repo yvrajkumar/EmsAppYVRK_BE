@@ -7,7 +7,7 @@ module AddEmp
         include ::Hanami::Action
         def call (env)
             puts "add emp"
-            req = request.body.read
+            req = request.body.read()
             signupDetails = req
             name = signupDetails['signupDetails']['name']
             email = signupDetails['signupDetails']['email']
