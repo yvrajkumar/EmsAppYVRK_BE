@@ -6,6 +6,7 @@ module SignIn
     class SignIn
         include ::Hanami::Action
         def call (env)
+            request.body.rewind
             response = request.body.read
             request.body.rewind
             puts response
